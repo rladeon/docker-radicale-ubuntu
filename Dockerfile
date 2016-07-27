@@ -5,8 +5,8 @@ USER root
 
 RUN apt-get -y update && apt-get -y upgrade 
 RUN apt-get install -y python
-Run apt-get install -y apache2-utils
-Run apt-get install -y curl
+RUN apt-get install -y apache2-utils
+RUN apt-get install -y curl
 RUN curl "https://bootstrap.pypa.io/get-pip.py" -o "get-pip.py"
 RUN python get-pip.py
 
@@ -30,4 +30,4 @@ WORKDIR /home/radicale
 
 CMD ["radicale"]
 
-User root
+USER root
